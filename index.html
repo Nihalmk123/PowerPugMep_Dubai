@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Power Plug Electromechanical Works LLC | Leading MEP Contractor Dubai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -8188,6 +8189,357 @@
             visibility: visible !important;
             transform: scale(1) !important;
         }
+
+        /* ═══════════════════════════════════════════════════════════════
+   MOBILE-FIRST CRITICAL OVERRIDES
+═══════════════════════════════════════════════════════════════ */
+
+        /* Force proper viewport rendering */
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        body {
+            min-width: 320px;
+            overflow-x: hidden !important;
+        }
+
+        /* Fix all containers */
+        .nav-container,
+        .cert-container,
+        .pillars-container,
+        .stats-container-v2,
+        .about-container,
+        .trans-header-container,
+        .trans-wide-wrapper,
+        .testimonials-container,
+        .circles-container,
+        .mini-projects-container,
+        .faq-container,
+        .footer-container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+        /* Hero Section Mobile Fix */
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 100vh;
+                min-height: 600px;
+            }
+
+            .slide-content {
+                padding: 5rem 1rem 2rem;
+            }
+
+            .content-wrapper {
+                max-width: 100%;
+                padding: 0 0.5rem;
+            }
+
+            .slide-title {
+                font-size: 1.75rem !important;
+                line-height: 1.25;
+                margin-bottom: 1rem;
+            }
+
+            .slide-description {
+                font-size: 0.9rem !important;
+                line-height: 1.6;
+                padding: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            .slide-btn {
+                padding: 0.7rem 1.5rem !important;
+                font-size: 0.85rem !important;
+            }
+
+            .nav-arrow {
+                width: 45px !important;
+                height: 45px !important;
+                font-size: 1.1rem !important;
+            }
+        }
+
+        /* Certifications Strip Mobile */
+        @media (max-width: 768px) {
+            .certifications-strip {
+                padding: 1.5rem 0;
+            }
+
+            .cert-container {
+                padding: 0 1rem !important;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .cert-item {
+                flex: 0 1 auto;
+                min-width: 140px;
+                font-size: 0.75rem;
+                padding: 0.6rem 1rem;
+            }
+        }
+
+        /* Services Pillars Mobile */
+        @media (max-width: 768px) {
+            .services-pillars-section {
+                padding: 3rem 0;
+            }
+
+            .section-header-left .title-dark {
+                font-size: 1.75rem !important;
+            }
+
+            .pillars-wrapper {
+                gap: 1rem;
+            }
+
+            .pillar-item {
+                border-radius: 16px;
+            }
+
+            .pillar-content {
+                padding: 1.5rem;
+            }
+
+            .pillar-text h3 {
+                font-size: 1.15rem !important;
+            }
+        }
+
+        /* Stats Section Mobile */
+        @media (max-width: 768px) {
+            .stats-section-v2 {
+                padding: 3rem 0;
+            }
+
+            .stats-title-v2 {
+                font-size: 1.75rem !important;
+            }
+
+            .stats-grid-v2 {
+                grid-template-columns: 1fr !important;
+                gap: 2rem;
+                padding-top: 2rem;
+            }
+
+            .stat-number-v2 {
+                font-size: 3rem !important;
+            }
+        }
+
+        /* About Section Mobile */
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 3rem 0;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem !important;
+            }
+
+            .about-badge {
+                position: static;
+                margin-top: 1rem;
+                display: inline-flex;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+                padding: 1rem 2rem !important;
+            }
+        }
+
+        /* Transformation Carousel Mobile */
+        @media (max-width: 768px) {
+            .trans-carousel-section {
+                padding: 3rem 0;
+            }
+
+            .trans-section-title {
+                font-size: 1.75rem !important;
+            }
+
+            .trans-slides-container {
+                height: auto !important;
+                min-height: 500px;
+            }
+
+            .compare-viewer {
+                height: 280px !important;
+            }
+
+            .trans-info-wide {
+                padding: 1.5rem 1rem !important;
+            }
+
+            .trans-info-wide h3 {
+                font-size: 1.1rem !important;
+            }
+
+            .carousel-nav {
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 1rem !important;
+            }
+
+            .nav-left {
+                left: 5px !important;
+            }
+
+            .nav-right {
+                right: 5px !important;
+            }
+        }
+
+        /* Testimonials Mobile */
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem !important;
+            }
+
+            .testimonial-card-slider {
+                min-width: 280px !important;
+                max-width: 280px !important;
+                padding: 1.5rem !important;
+            }
+        }
+
+        /* Connected Circles Mobile */
+        @media (max-width: 768px) {
+            .connected-circles-section {
+                padding: 3rem 0;
+            }
+
+            .circles-title {
+                font-size: 1.75rem !important;
+            }
+
+            .circular-network {
+                min-height: 500px !important;
+            }
+
+            .orbital-circles {
+                height: 500px !important;
+            }
+
+            .feature-circle {
+                width: 110px !important;
+                height: 110px !important;
+            }
+
+            .central-circle {
+                width: 140px !important;
+                height: 140px !important;
+            }
+        }
+
+        /* Mini Projects Mobile */
+        @media (max-width: 768px) {
+            .mini-projects-section {
+                padding: 3rem 0;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .project-card {
+                margin: 0 auto;
+                max-width: 100%;
+            }
+        }
+
+        /* FAQ Mobile */
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 3rem 0;
+            }
+
+            .faq-question {
+                font-size: 0.95rem !important;
+                padding: 1rem 1.2rem !important;
+            }
+
+            .faq-answer {
+                padding: 0 1.2rem !important;
+            }
+        }
+
+        /* Footer Mobile */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 3rem 1rem 2rem;
+            }
+
+            .footer-grid {
+                gap: 2rem;
+            }
+
+            .footer-logo-img {
+                width: 120px !important;
+                height: auto !important;
+            }
+        }
+
+        /* Force Images to Fit */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Prevent Horizontal Scroll */
+        * {
+            max-width: 100%;
+        }
+
+        .slide-bg,
+        .img-layer img,
+        .about-image img,
+        .project-image img {
+            width: 100% !important;
+            object-fit: cover;
+        }
+
+        /* WhatsApp/Up Buttons Mobile */
+        @media (max-width: 768px) {
+
+            .whatsapp-float,
+            .scroll-to-top {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.3rem !important;
+            }
+
+            .whatsapp-float {
+                bottom: 80px !important;
+                right: 15px !important;
+            }
+
+            .scroll-to-top {
+                bottom: 20px !important;
+                right: 15px !important;
+            }
+        }
     </style>
 </head>
 
@@ -10485,8 +10837,15 @@
 
             console.log('Scroll reveal initialized for', elements.length, 'elements');
         });
+        // Force mobile viewport
+        if (window.innerWidth < 768) {
+            document.querySelector('meta[name="viewport"]').setAttribute('content',
+                'width=device-width, initial-scale=1.0, maximum-scale=5.0');
 
-
+            // Disable horizontal scroll
+            document.body.style.overflowX = 'hidden';
+            document.documentElement.style.overflowX = 'hidden';
+        }
     </script>
 </body>
 
