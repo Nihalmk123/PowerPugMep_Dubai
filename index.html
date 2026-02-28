@@ -3136,48 +3136,89 @@
             box-shadow: 0 10px 28px rgba(238, 108, 77, 0.35);
         }
 
-        /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ /* ═══════════════════════════════════════════════════════════════
+   CONTACT FORM - FIXED & RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
-        @media (max-width: 640px) {
-            .contact-section {
-                padding: 4rem 1.5rem;
-            }
 
-            .section-title {
-                font-size: 1.8rem;
-            }
+/* 1. Base Styles (Desktop Default) */
+.contact-section {
+    padding: 6rem 0;
+    background: #F8FAFC;
+}
 
-            .contact-form-wrapper {
-                padding: 2rem;
-            }
-        }
+.contact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
 
-        @media (min-width: 768px) {
-            .contact-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 4rem;
-                align-items: start;
-            }
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+    gap: 4rem;
+    align-items: start;
+}
 
-            .section-title {
-                font-size: 2.5rem;
-            }
-        }
+.contact-form-wrapper {
+    background: #FFFFFF;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 168, 232, 0.1);
+}
 
-        @media (min-width: 1025px) {
-            .contact-section {
-                padding: 8rem 3rem;
-            }
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 
-            .section-title {
-                font-size: 3rem;
-            }
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Ensure they fill their container */
+    padding: 1rem 1.5rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
 
-            .contact-form-wrapper {
-                padding: 3rem;
-            }
-        }
+/* 2. MOBILE OVERRIDES (Only for screens < 968px) */
+@media (max-width: 968px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack vertically on tablet/mobile */
+        gap: 3rem;
+    }
+    
+    .contact-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .contact-container {
+        padding: 0 1rem;
+    }
+}
+
+/* 3. PHONE SPECIFIC (Only for screens < 640px) */
+@media (max-width: 640px) {
+    .contact-form-wrapper {
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .form-group input,
+    .form-group select, 
+    .form-group textarea {
+        padding: 0.8rem 1rem; /* Compact padding */
+        font-size: 0.95rem;
+    }
+    
+    .contact-form {
+        gap: 1rem; /* Tighter gap */
+    }
+}
 
         /* ═══════════════════════════════════════════════════════════════
    LEADERSHIP SHOWCASE - UPDATED COLORS
