@@ -158,7 +158,7 @@
             padding: 0.8rem 3rem;
         }
 
-        /* ═══════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════
    LOGO IMAGE
 ═══════════════════════════════════════════════════════════════ */
         .logo-img {
@@ -185,7 +185,7 @@
             height: 48px;
         }
 
-        /* ═══════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════
    NAVIGATION MENU
 ═══════════════════════════════════════════════════════════════ */
         .nav-menu {
@@ -244,7 +244,7 @@
             width: 100%;
         }
 
-        /* ═══════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════
    CTA BUTTON - ORANGE FOR HIGH CONVERSION
 ═══════════════════════════════════════════════════════════════ */
         /* CTA BUTTON - ORANGE FOR HIGH CONVERSION */
@@ -8338,6 +8338,36 @@
         justify-content: center;
     }
 }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+.sec{background:#fff;padding:80px 0 88px;font-family:'Poppins',system-ui,sans-serif;overflow:hidden;}
+.hd{text-align:center;max-width:900px;margin:0 auto 56px;padding:0 40px;}
+.badge{display:inline-block;padding:0.7rem 1.8rem;background:#F8FAFC;color:#00a8e8;font-size:0.65rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;border-radius:6px;margin-bottom:1.5rem;border:1px solid rgba(0,168,232,0.2);}
+.title{font-size:3rem;font-weight:800;line-height:1.2;letter-spacing:-1.5px;color:#0F172A;margin:0 0 1rem 0;}
+.title span{color:#00a8e8;}
+.sub{font-size:1rem;line-height:1.7;color:#64748B;font-weight:400;margin:0 auto;max-width:600px;}
+
+.strip{border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0;background:#F8FAFC;padding:44px 0;overflow:hidden;}
+.mask{-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);}
+.row{margin-bottom:20px;}
+.row:last-child{margin-bottom:0;}
+.track{display:flex;gap:0;width:max-content;}
+.t-fwd{animation:fwd 34s linear infinite;}
+.t-rev{animation:rev 38s linear infinite;}
+.track:hover{animation-play-state:paused;}
+@keyframes fwd{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes rev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+.lcard{display:flex;align-items:center;justify-content:center;width:170px;height:72px;flex-shrink:0;border-right:1px solid #E2E8F0;padding:0 20px;transition:background .2s;cursor:default;}
+.lcard:hover{background:#fff;}
+.lcard:hover .lbox{border-color:rgba(0,168,232,.3);box-shadow:0 2px 14px rgba(0,168,232,.1);}
+.lbox{width:120px;height:46px;border-radius:8px;border:1.5px solid #edf0f4;background:#fff;display:flex;align-items:center;justify-content:center;padding:6px 10px;transition:all .2s;overflow:hidden;}
+.lbox svg{width:100%;height:100%;}
+
+.stats{text-align:center;margin-top:52px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;}
+.si{text-align:center;}
+.sv{display:block;font-size:2rem;font-weight:800;letter-spacing:-0.04em;color:#00a8e8;line-height:1;}
+.sl{display:block;font-size:0.65rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#64748B;margin-top:5px;}
+.sdiv{width:1px;height:36px;background:#E2E8F0;}
     </style>
 </head>
 
@@ -8630,7 +8660,30 @@
             </div>
         </div>
     </section>
+<section class="sec">
+  <div class="hd">
+    <div class="badge">Our clients</div>
+    <div class="title">Trusted by <span>industry leaders</span><br>across the UAE.</div>
+    <div class="sub">From luxury residential towers to large-scale commercial developments — delivering MEP excellence for Dubai's most ambitious projects.</div>
+  </div>
 
+  <div class="strip">
+    <div class="mask">
+      <div class="row"><div class="track t-fwd" id="r1"></div></div>
+      <div class="row"><div class="track t-rev" id="r2"></div></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="si"><span class="sv">40+</span><span class="sl">Projects delivered</span></div>
+    <div class="sdiv"></div>
+    <div class="si"><span class="sv">12+</span><span class="sl">Years experience</span></div>
+    <div class="sdiv"></div>
+    <div class="si"><span class="sv">UAE</span><span class="sl">Based &amp; certified</span></div>
+    <div class="sdiv"></div>
+    <div class="si"><span class="sv">100%</span><span class="sl">On-time delivery</span></div>
+  </div>
+</section>
     <!-- CONNECTED CIRCLES SECTION -->
     <!-- SPLIT CIRCLES SECTION -->
     <section class="split-circles-section" id="why-choose">
@@ -10636,7 +10689,30 @@
             console.log('Scroll reveal initialized for', elements.length, 'elements');
         });
 
-
+(function(){
+const logos=[
+  {n:'Emaar',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="10" width="7" height="20" fill="#1B4F8C"/><rect x="13" y="16" width="7" height="14" fill="#1B4F8C"/><rect x="22" y="6" width="7" height="24" fill="#00a8e8"/><text x="34" y="26" font-family="Poppins,sans-serif" font-size="14" font-weight="800" fill="#1B4F8C">EMAAR</text></svg>`},
+  {n:'Damac',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><polygon points="6,30 14,10 22,30" fill="#C8A84B"/><text x="28" y="26" font-family="Poppins,sans-serif" font-size="13" font-weight="800" fill="#1a1a1a">DAMAC</text></svg>`},
+  {n:'Aldar',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="20" r="10" fill="none" stroke="#E63027" stroke-width="2.5"/><circle cx="16" cy="20" r="4" fill="#E63027"/><text x="32" y="26" font-family="Poppins,sans-serif" font-size="13" font-weight="800" fill="#1a1a1a">ALDAR</text></svg>`},
+  {n:'Nakheel',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><path d="M5,30 L13,10 L21,30 Z" fill="none" stroke="#2E7D32" stroke-width="2"/><path d="M9,30 L13,18 L17,30 Z" fill="#2E7D32"/><text x="27" y="26" font-family="Poppins,sans-serif" font-size="12" font-weight="800" fill="#1a1a1a">NAKHEEL</text></svg>`},
+  {n:'Sobha',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="22" height="22" rx="4" fill="none" stroke="#7B1FA2" stroke-width="2"/><rect x="9" y="13" width="12" height="12" rx="2" fill="#7B1FA2"/><text x="32" y="26" font-family="Poppins,sans-serif" font-size="13" font-weight="800" fill="#1a1a1a">SOBHA</text></svg>`},
+  {n:'Meraas',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><path d="M5,30 L5,12 L13,22 L21,12 L21,30" fill="none" stroke="#00838F" stroke-width="2.5" stroke-linejoin="round"/><text x="27" y="26" font-family="Poppins,sans-serif" font-size="12" font-weight="800" fill="#1a1a1a">MERAAS</text></svg>`},
+  {n:'Azizi',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><path d="M4,30 L13,10 L22,30 L18,30 L13,17 L8,30 Z" fill="#F57C00"/><text x="28" y="26" font-family="Poppins,sans-serif" font-size="14" font-weight="800" fill="#1a1a1a">AZIZI</text></svg>`},
+  {n:'MAF',s:`<svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="11" width="22" height="16" rx="3" fill="#D32F2F"/><text x="7" y="23" font-family="Poppins,sans-serif" font-size="10" font-weight="800" fill="#fff">MAF</text><text x="31" y="26" font-family="Poppins,sans-serif" font-size="11" font-weight="800" fill="#1a1a1a">Al Futtaim</text></svg>`},
+  {n:'ICD',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="10" width="6" height="20" rx="2" fill="#1565C0"/><path d="M14,10 Q30,10 30,20 Q30,30 14,30 Z" fill="none" stroke="#1565C0" stroke-width="2.5"/><text x="36" y="26" font-family="Poppins,sans-serif" font-size="14" font-weight="800" fill="#1565C0">ICD</text></svg>`},
+  {n:'Deyaar',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><path d="M5,28 L5,12 Q5,10 7,10 L15,10 Q23,10 23,20 Q23,28 15,28 Z" fill="none" stroke="#558B2F" stroke-width="2.5"/><rect x="9" y="15" width="9" height="9" rx="1" fill="#558B2F"/><text x="29" y="26" font-family="Poppins,sans-serif" font-size="12" font-weight="800" fill="#1a1a1a">DEYAAR</text></svg>`},
+  {n:'Arabtec',s:`<svg viewBox="0 0 110 40" xmlns="http://www.w3.org/2000/svg"><polygon points="14,8 24,20 14,32 4,20" fill="none" stroke="#37474F" stroke-width="2"/><polygon points="14,14 20,20 14,26 8,20" fill="#37474F"/><text x="30" y="26" font-family="Poppins,sans-serif" font-size="11" font-weight="800" fill="#1a1a1a">ARABTEC</text></svg>`},
+  {n:'Al Habtoor',s:`<svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><path d="M4,30 L10,10 L16,22 L22,10 L28,30" fill="none" stroke="#BF360C" stroke-width="2.5" stroke-linejoin="round"/><text x="34" y="26" font-family="Poppins,sans-serif" font-size="11" font-weight="800" fill="#1a1a1a">AL HABTOOR</text></svg>`},
+];
+function card(l){return`<div class="lcard"><div class="lbox">${l.s}</div></div>`;}
+function fill(id,list){
+  const el=document.getElementById(id);
+  if(!el)return;
+  el.innerHTML=[...list,...list,...list,...list].map(card).join('');
+}
+fill('r1',logos.slice(0,6));
+fill('r2',logos.slice(6,12));
+})();
     </script>
 </body>
 
