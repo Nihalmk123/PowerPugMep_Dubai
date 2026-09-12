@@ -9855,18 +9855,19 @@
                 </div>
 
                 <div class="contact-form-wrapper fade-in-up">
-                    <form class="contact-form">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify>
+                        <input type="hidden" name="form-name" value="contact">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name *" required>
+                            <input type="text" name="name" placeholder="Your Name *" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email *" required>
+                            <input type="email" name="email" placeholder="Your Email *" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number *" required>
+                            <input type="tel" name="phone" placeholder="Phone Number *" required>
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <select name="service" required>
                                 <option value="">Select Service *</option>
                                 <option value="electrical">Electrical Systems</option>
                                 <option value="hvac">HVAC & Mechanical</option>
@@ -9877,7 +9878,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea rows="5" placeholder="Project Details *" required></textarea>
+                            <textarea name="message" rows="5" placeholder="Project Details *" required></textarea>
                         </div>
                         <button type="submit" class="cta-button">Send Message</button>
                     </form>
@@ -10327,12 +10328,44 @@
             counterObserver.observe(counter);
         });
 
-        // FORM SUBMISSION
-        document.querySelector('.contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you! Your message has been sent. We will contact you soon.');
-            this.reset();
-        });
+        // FORM SUBMISSION (Netlify AJAX Submission)
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const form = this;
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn ? submitBtn.innerText : 'Send Message';
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerText = 'Sending...';
+                }
+
+                const formData = new FormData(form);
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(formData).toString()
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Thank you! Your message has been sent. We will contact you soon.');
+                        form.reset();
+                    } else {
+                        alert('Oops! There was a problem submitting your form. Please try again.');
+                    }
+                })
+                .catch(() => {
+                    alert('Oops! There was an error submitting your form. Please try again.');
+                })
+                .finally(() => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalText;
+                    }
+                });
+            });
+        }
 
         // ADVANCED PARALLAX EFFECT FOR STATS SECTION
         function initParallax() {
