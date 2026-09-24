@@ -1,0 +1,2694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Power Plug Electromechanical Works LLC</title>
+    <meta name="description" content="MEP project delivered by Power Plug Electromechanical Works LLC, Dubai.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ═══════════════════════════════════════════════════════════════
+           COLOR PALETTE - DARK NAVY & CYAN THEME
+        ═══════════════════════════════════════════════════════════════ */
+        :root {
+            /* LUXURY PALETTE */
+            --gold: #D4AF37;
+            /* Metallic Gold */
+            --gold-light: #F3E5AB;
+            --gold-dark: #AA8C2C;
+            --slate-dark: #0F172A;
+            --slate-glass: rgba(15, 23, 42, 0.7);
+            --white: #FFFFFF;
+
+            /* PRIMARY - Corporate Authority */
+            --primary: #0F172A;
+            --primary-light: #1E293B;
+            --primary-dark: #020617;
+
+            /* SECONDARY - Tech Accent */
+            --secondary: #06B6D4;
+            --secondary-light: #22D3EE;
+            --secondary-dark: #0891B2;
+
+            /* ACCENT */
+            --accent-blue: #3B82F6;
+            --accent-green: #10B981;
+
+            /* NEUTRALS */
+            --dark: #0F172A;
+            --gray: #64748B;
+            --light-gray: #F8FAFC;
+            --white: #FFFFFF;
+
+            /* GRADIENTS */
+            --gradient-primary: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            --gradient-secondary: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(15, 23, 42, 0.45) 0%, rgba(30, 41, 59, 0.40) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'poppins', sans-serif;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SCROLL ANIMATIONS
+       
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger animation delays */
+        .service-card:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .service-card:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .service-card:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .service-card:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .trust-item:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .trust-item:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .trust-item:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .trust-item:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   NAVIGATION - UPDATED COLORS ONLY
+═══════════════════════════════════════════════════════════════ */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            background: rgba(15, 23, 42, 0.95);
+            /* Keep navy dark */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 0;
+            border-bottom: 1px solid rgba(0, 168, 232, 0.15);
+            /* ✅ CHANGED: Cyan border */
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar.scrolled {
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 168, 232, 0.25);
+            /* ✅ CHANGED: Brighter cyan */
+            box-shadow: 0 4px 30px rgba(0, 168, 232, 0.15);
+            /* ✅ CHANGED: Cyan glow */
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .navbar.scrolled .nav-container {
+            padding: 0.8rem 3rem;
+        }
+
+/* ═══════════════════════════════════════════════════════════════
+   LOGO IMAGE
+═══════════════════════════════════════════════════════════════ */
+        .logo-img {
+            height: 45px;
+            width: 120px;
+            display: block;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10000;
+        }
+
+        .logo-img:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 168, 232, 0.4);
+            /* ✅ CHANGED: Cyan glow */
+            filter: brightness(1.1);
+        }
+
+        .logo-img:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        .navbar.scrolled .logo-img {
+            height: 48px;
+        }
+
+/* ═══════════════════════════════════════════════════════════════
+   NAVIGATION MENU
+═══════════════════════════════════════════════════════════════ */
+        .nav-menu {
+            display: none;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #00a8e8, #1c559a);
+            /* ✅ CHANGED: Cyan to blue gradient */
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .nav-link:hover {
+            color: #00a8e8;
+            /* ✅ CHANGED: Bright cyan hover */
+            transform: translateY(-2px);
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: #00a8e8;
+            /* ✅ CHANGED: Bright cyan active */
+        }
+
+        .nav-link.active::before {
+            width: 100%;
+        }
+
+/* ═══════════════════════════════════════════════════════════════
+   CTA BUTTON - ORANGE FOR HIGH CONVERSION
+═══════════════════════════════════════════════════════════════ */
+        /* CTA BUTTON - ORANGE FOR HIGH CONVERSION */
+.nav-cta {
+    /* default: mobile first (HIDE) */
+    display: none;
+    background: linear-gradient(135deg, #ee6c4d, #d85a3d);
+    color: #FFFFFF;
+    padding: 0.6rem 1.0rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(238, 108, 77, 0.3);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+        .navbar.scrolled .nav-cta {
+            padding: 0.7rem 1.6rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-cta:hover {
+            background: linear-gradient(135deg, #d85a3d, #c04d2c);
+            /* ✅ CHANGED: Darker orange */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(238, 108, 77, 0.4);
+            /* ✅ CHANGED: Stronger shadow */
+        }
+
+        .nav-cta:active {
+            transform: translateY(-1px);
+        }
+
+        .nav-cta i {
+            font-size: 1.1rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   MOBILE TOGGLE
+═══════════════════════════════════════════════════════════════ */
+        .mobile-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 10001;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .mobile-toggle span {
+            width: 28px;
+            height: 3px;
+            background: #00a8e8;
+            /* ✅ CHANGED: Bright cyan */
+            border-radius: 3px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   MOBILE SIDEBAR
+═══════════════════════════════════════════════════════════════ */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 380px;
+            height: 100vh;
+            background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+            /* Keep navy */
+            z-index: 9998;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            padding: 90px 0 2rem;
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+            border-left: 2px solid rgba(0, 168, 232, 0.3);
+            /* ✅ CHANGED: Cyan border */
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(5px);
+            z-index: 9997;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile Menu Items */
+        .mobile-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-sidebar.active .mobile-menu li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-sidebar.active .mobile-menu li:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .mobile-sidebar.active .mobile-menu li:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .mobile-sidebar.active .mobile-menu li:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        .mobile-sidebar.active .mobile-menu li:nth-child(4) {
+            transition-delay: 0.25s;
+        }
+
+        .mobile-sidebar.active .mobile-menu li:nth-child(5) {
+            transition-delay: 0.3s;
+        }
+
+        .mobile-sidebar.active .mobile-menu li:nth-child(6) {
+            transition-delay: 0.35s;
+        }
+
+        .mobile-sidebar.active .mobile-menu li:nth-child(7) {
+            transition-delay: 0.4s;
+        }
+
+        .mobile-sidebar.active .mobile-menu li:nth-child(8) {
+            transition-delay: 0.45s;
+        }
+
+        .mobile-link {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 1.2rem 2rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .mobile-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background: linear-gradient(135deg, #00a8e8, #1c559a);
+            /* ✅ CHANGED: Cyan gradient */
+            transition: width 0.3s ease;
+        }
+
+        .mobile-link:hover,
+        .mobile-link.active {
+            background: rgba(0, 168, 232, 0.1);
+            /* ✅ CHANGED: Cyan background */
+            color: #00a8e8;
+            /* ✅ CHANGED: Cyan text */
+            padding-left: 2.5rem;
+        }
+
+        .mobile-link:hover::before,
+        .mobile-link.active::before {
+            width: 4px;
+        }
+
+        /* Mobile CTA */
+        .mobile-cta {
+            margin: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, #ee6c4d, #d85a3d);
+            /* ✅ CHANGED: Orange CTA */
+            color: #FFFFFF;
+            padding: 1.2rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(238, 108, 77, 0.3);
+            /* ✅ CHANGED: Orange shadow */
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .mobile-sidebar.active .mobile-cta {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.5s;
+        }
+
+        .mobile-cta:active {
+            transform: scale(0.98);
+            background: linear-gradient(135deg, #d85a3d, #c04d2c);
+            /* ✅ CHANGED: Darker orange */
+        }
+
+        .mobile-cta i {
+            font-size: 1.3rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+        @media (min-width: 1025px) {
+            .nav-menu {
+                display: flex;
+            }
+
+            .nav-cta {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .nav-container {
+                padding: 1.2rem 2.5rem;
+            }
+
+            .navbar.scrolled .nav-container {
+                padding: 0.8rem 2.5rem;
+            }
+
+            .nav-menu {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .nav-container {
+                padding: 1rem 2rem;
+            }
+
+            .navbar.scrolled .nav-container {
+                padding: 0.8rem 2rem;
+            }
+
+            .logo-img {
+                height: 50px;
+            }
+
+            .navbar.scrolled .logo-img {
+                height: 44px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .navbar.scrolled .nav-container {
+                padding: 0.8rem 1.5rem;
+            }
+
+            .logo-img {
+                height: 45px;
+                border-radius: 10px;
+            }
+
+            .navbar.scrolled .logo-img {
+                height: 40px;
+            }
+
+            .mobile-sidebar {
+                width: 90%;
+                max-width: 100%;
+            }
+
+            .mobile-toggle span {
+                width: 25px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   FOOTER - CYAN THEME
+═══════════════════════════════════════════════════════════════ */
+        .footer {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: #FFFFFF;
+            padding: 5rem 1.5rem 2rem;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Optional: Subtle pattern overlay */
+        .footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(0, 168, 232, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 168, 232, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .footer-container {
+            max-width: 1320px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   FOOTER GRID
+═══════════════════════════════════════════════════════════════ */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(0, 168, 232, 0.2);
+            /* ✅ Cyan divider */
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   COLUMN 1 - LOGO & BRAND
+═══════════════════════════════════════════════════════════════ */
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo-img {
+            width: 150px;
+            height: 80px;
+            border-radius: 15px;
+            object-fit: contain;
+            filter: brightness(1.2);
+        }
+
+        .footer-logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-text {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin: 0;
+            max-width: 350px;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   CERTIFICATION BADGES - CYAN THEME
+═══════════════════════════════════════════════════════════════ */
+        .footer-certifications {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .cert-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            background: rgba(0, 168, 232, 0.1);
+            /* ✅ Cyan glass */
+            border: 1px solid rgba(0, 168, 232, 0.3);
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .cert-badge:hover {
+            background: rgba(0, 168, 232, 0.2);
+            border-color: #00a8e8;
+            transform: translateY(-2px);
+        }
+
+        .cert-badge i {
+            color: #00a8e8;
+            /* ✅ Cyan icon */
+            font-size: 1rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   FOOTER TITLES
+═══════════════════════════════════════════════════════════════ */
+        .footer-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #00a8e8, transparent);
+            /* ✅ Cyan underline */
+            border-radius: 2px;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   FOOTER LINKS - CYAN HOVER
+═══════════════════════════════════════════════════════════════ */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a i {
+            font-size: 0.7rem;
+            color: #00a8e8;
+            /* ✅ Cyan chevron */
+            transition: transform 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00a8e8;
+            /* ✅ Cyan text on hover */
+            transform: translateX(5px);
+        }
+
+        .footer-links a:hover i {
+            transform: translateX(3px);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   CONTACT INFO - CYAN ICONS
+═══════════════════════════════════════════════════════════════ */
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .footer-contact i {
+            color: #00a8e8;
+            /* ✅ Cyan icons */
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   SOCIAL LINKS - CYAN THEME
+═══════════════════════════════════════════════════════════════ */
+        .footer-social {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 168, 232, 0.1);
+            /* ✅ Cyan glass */
+            border: 1px solid rgba(0, 168, 232, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00a8e8;
+            /* ✅ Cyan icon */
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social-icon:hover {
+            background: linear-gradient(135deg, #00a8e8, #1c559a);
+            /* ✅ Cyan gradient */
+            border-color: #00a8e8;
+            color: #FFFFFF;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 168, 232, 0.3);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   FOOTER BOTTOM
+═══════════════════════════════════════════════════════════════ */
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+            padding-top: 2rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #00a8e8;
+            /* ✅ Cyan hover */
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+        @media (max-width: 640px) {
+            .footer {
+                padding: 4rem 1.5rem 2rem;
+            }
+
+            .footer-grid {
+                gap: 2.5rem;
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .footer-logo-text {
+                font-size: 1.6rem;
+            }
+
+            .footer-certifications {
+                flex-direction: column;
+            }
+
+            .cert-badge {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 767px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .footer {
+                padding: 6rem 3rem 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+                gap: 4rem;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            .footer-text {
+                max-width: 100%;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   FLOATING ACTION BUTTONS - CYAN THEME
+═══════════════════════════════════════════════════════════════ */
+        .floating-buttons {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   WHATSAPP BUTTON - REDUCED SIZE
+═══════════════════════════════════════════════════════════════ */
+        .whatsapp-btn {
+            width: 50px !important;
+            /* ✅ FIXED: Was 10px */
+            height: 50px !important;
+            /* ✅ FIXED: Was 10px */
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 1.5rem !important;
+            /* ✅ FIXED: Was 1.8rem */
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-btn i {
+            animation: shake 1s ease-in-out infinite;
+        }
+
+        /* WhatsApp Tooltip */
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 65px;
+            /* ✅ ADJUSTED: Was 75px */
+            background: #0F172A;
+            color: #FFFFFF;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 8px solid transparent;
+            border-left-color: #0F172A;
+        }
+
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   SCROLL TO TOP BUTTON - REDUCED SIZE
+═══════════════════════════════════════════════════════════════ */
+        .scroll-top-btn {
+            width: 45px !important;
+            /* ✅ FIXED: Was 20px */
+            height: 45px !important;
+            /* ✅ FIXED: Was 20px */
+            background: linear-gradient(135deg, #00a8e8, #1c559a);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 1.1rem !important;
+            /* ✅ FIXED: Was 1.2rem */
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0, 168, 232, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.8);
+        }
+
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        .scroll-top-btn:hover {
+            transform: scale(1.15) translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 168, 232, 0.5);
+            background: linear-gradient(135deg, #1c559a, #00a8e8);
+        }
+
+        .scroll-top-btn:active {
+            transform: scale(0.95);
+        }
+
+        .scroll-top-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-top-btn:hover i {
+            transform: translateY(-3px);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════════════════════════ */
+
+        /* Pulse Animation for WhatsApp */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6);
+            }
+        }
+
+        /* Shake Animation for WhatsApp Icon */
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: rotate(-10deg);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: rotate(10deg);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE - MOBILE OPTIMIZED
+═══════════════════════════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            .floating-buttons {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                gap: 0.8rem;
+            }
+
+            .whatsapp-btn {
+                width: 45px !important;
+                height: 45px !important;
+                font-size: 1.4rem !important;
+            }
+
+            .scroll-top-btn {
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 1rem !important;
+            }
+
+            /* Hide tooltip on mobile, show icon only */
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .floating-buttons {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .whatsapp-btn {
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 1.3rem !important;
+            }
+
+            .scroll-top-btn {
+                width: 35px !important;
+                height: 35px !important;
+                font-size: 0.95rem !important;
+            }
+        }
+
+        /* Tablet landscape */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .floating-buttons {
+                bottom: 2rem;
+                right: 2rem;
+            }
+
+            .whatsapp-btn {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.5rem !important;
+            }
+
+            .scroll-top-btn {
+                width: 45px !important;
+                height: 45px !important;
+                font-size: 1.1rem !important;
+            }
+        }
+
+        /* Large screens - REDUCED */
+        @media (min-width: 1400px) {
+            .floating-buttons {
+                bottom: 3rem;
+                right: 3rem;
+            }
+
+            .whatsapp-btn {
+                width: 55px !important;
+                /* ✅ REDUCED: Was 65px */
+                height: 55px !important;
+                /* ✅ REDUCED: Was 65px */
+                font-size: 1.7rem !important;
+                /* ✅ REDUCED: Was 2rem */
+            }
+
+            .scroll-top-btn {
+                width: 50px !important;
+                /* ✅ REDUCED: Was 60px */
+                height: 50px !important;
+                /* ✅ REDUCED: Was 60px */
+                font-size: 1.2rem !important;
+                /* ✅ REDUCED: Was 1.4rem */
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   ACCESSIBILITY - REDUCED MOTION
+═══════════════════════════════════════════════════════════════ */
+        @media (prefers-reduced-motion: reduce) {
+
+            .whatsapp-btn,
+            .scroll-top-btn {
+                animation: none;
+                transition: none;
+            }
+
+            .whatsapp-btn i {
+                animation: none;
+            }
+        }
+
+        .section-header-center {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 0.7rem 1.8rem;
+            background: #F8FAFC;
+            color: #00a8e8;
+            /* ✅ CHANGED: Bright cyan */
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0, 168, 232, 0.2);
+            /* ✅ CHANGED: Cyan border */
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0F172A;
+            margin-bottom: 1rem;
+            letter-spacing: -1.5px;
+        }
+
+        .section-title .accent {
+            color: #00a8e8;
+            /* ✅ CHANGED: Cyan accent for any highlighted words */
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: #64748B;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   PROJECTS GRID - UPDATED COLORS
+═══════════════════════════════════════════════════════════════ */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 168, 232, 0.15);
+            /* ✅ CHANGED: Cyan glow */
+            border-color: #00a8e8;
+            /* ✅ CHANGED: Cyan border */
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   PROJECT IMAGE
+═══════════════════════════════════════════════════════════════ */
+        .project-image {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        /* Category Badge - CYAN */
+        .project-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 168, 232, 0.9);
+            /* ✅ CHANGED: Cyan background */
+            color: #FFFFFF;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   PROJECT INFO - UPDATED COLORS
+═══════════════════════════════════════════════════════════════ */
+        .project-info {
+            padding: 1.8rem;
+        }
+
+        .project-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .project-info>p {
+            font-size: 0.95rem;
+            color: #64748B;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Features List - CYAN ICONS */
+        .project-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            color: #0F172A;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        .project-features li i {
+            color: #00a8e8;
+            /* ✅ CHANGED: Cyan icons */
+            font-size: 0.75rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE - KEEP EXACTLY SAME
+═══════════════════════════════════════════════════════════════ */
+        @media (max-width: 1200px) {
+            .mini-projects-container {
+                padding: 0 2.5rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .mini-projects-section {
+                padding: 3rem 0 4rem 0;
+            }
+
+            .mini-projects-container {
+                padding: 0 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .project-image {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .mini-projects-container {
+                padding: 0 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .section-header-center {
+                margin-bottom: 2.5rem;
+            }
+
+            .project-info {
+                padding: 1.5rem;
+            }
+
+            .project-info h3 {
+                font-size: 1.15rem;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+   PROJECT DETAIL PAGE
+═══════════════════════════════════════════════════════════════ */
+        .pd-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .accent {
+            color: #00a8e8;
+        }
+
+        /* HERO BANNER */
+        .pd-hero {
+            position: relative;
+            min-height: 78vh;
+            display: flex;
+            align-items: flex-end;
+            background: #0F172A center / cover no-repeat;
+            overflow: hidden;
+        }
+
+        .pd-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(15, 23, 42, 0.35) 0%,
+                    rgba(15, 23, 42, 0.6) 50%,
+                    rgba(15, 23, 42, 0.95) 100%);
+        }
+
+        .pd-hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
+
+        .pd-breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        .pd-breadcrumb a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .pd-breadcrumb a:hover {
+            color: #00a8e8;
+        }
+
+        .pd-breadcrumb i {
+            font-size: 0.65rem;
+            color: #00a8e8;
+        }
+
+        .pd-hero .project-category {
+            margin-bottom: 1.2rem;
+        }
+
+        .pd-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            color: #FFFFFF;
+            max-width: 900px;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .pd-hero-desc {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 720px;
+            margin-bottom: 2rem;
+        }
+
+        .pd-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .pd-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.7rem 1.2rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(0, 168, 232, 0.3);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pd-meta i {
+            color: #00a8e8;
+        }
+
+        /* SECTIONS */
+        .pd-section {
+            padding: 6rem 0;
+            background: #FFFFFF;
+        }
+
+        .pd-section.alt {
+            background: #F8FAFC;
+        }
+
+        .pd-section .section-header-center {
+            margin-bottom: 3.5rem;
+        }
+
+        /* OVERVIEW */
+        .pd-overview {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .pd-overview .section-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .pd-overview-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #64748B;
+            margin-bottom: 1.2rem;
+        }
+
+        .pd-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin-top: 2.5rem;
+        }
+
+        .pd-stat {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .pd-stat:hover {
+            border-color: #00a8e8;
+            box-shadow: 0 10px 30px rgba(0, 168, 232, 0.12);
+        }
+
+        .pd-stat strong {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #00a8e8;
+            line-height: 1.1;
+        }
+
+        .pd-stat span {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #64748B;
+        }
+
+        .pd-facts {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            border: 1px solid rgba(0, 168, 232, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+            position: sticky;
+            top: 110px;
+        }
+
+        .pd-facts h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 168, 232, 0.2);
+        }
+
+        .pd-facts ul {
+            list-style: none;
+        }
+
+        .pd-facts li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .pd-facts li:last-child {
+            border-bottom: none;
+        }
+
+        .pd-facts li i {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 168, 232, 0.15);
+            border: 1px solid rgba(0, 168, 232, 0.3);
+            border-radius: 10px;
+            color: #00a8e8;
+        }
+
+        .pd-facts small {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .pd-facts b {
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .pd-facts .cta-link {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, #ee6c4d, #d85a3d);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(238, 108, 77, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .pd-facts .cta-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(238, 108, 77, 0.4);
+        }
+
+        /* SCOPE OF WORK */
+        .pd-scope {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .pd-scope-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .pd-scope-card:hover {
+            transform: translateY(-6px);
+            border-color: #00a8e8;
+            box-shadow: 0 15px 40px rgba(0, 168, 232, 0.15);
+        }
+
+        .pd-scope-card .icon {
+            width: 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 168, 232, 0.1);
+            border-radius: 12px;
+            color: #00a8e8;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .pd-scope-card:hover .icon {
+            background: #00a8e8;
+            color: #FFFFFF;
+        }
+
+        .pd-scope-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 0.6rem;
+        }
+
+        .pd-scope-card p {
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: #64748B;
+        }
+
+        /* GALLERY */
+        .pd-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 240px;
+            gap: 1.2rem;
+        }
+
+        .pd-gallery button {
+            position: relative;
+            padding: 0;
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: zoom-in;
+            background: #E2E8F0;
+            font: inherit;
+        }
+
+        .pd-gallery button:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .pd-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .pd-gallery button::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, transparent 55%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pd-gallery figcaption {
+            position: absolute;
+            left: 1.2rem;
+            right: 1.2rem;
+            bottom: 1rem;
+            z-index: 1;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .pd-gallery button:hover img {
+            transform: scale(1.08);
+        }
+
+        .pd-gallery button:hover::after,
+        .pd-gallery button:hover figcaption {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* LIGHTBOX */
+        .pd-lightbox {
+            border: none;
+            padding: 0;
+            background: transparent;
+            max-width: 92vw;
+            max-height: 90vh;
+            margin: auto;
+            overflow: visible;
+        }
+
+        .pd-lightbox::backdrop {
+            background: rgba(2, 6, 23, 0.92);
+            backdrop-filter: blur(6px);
+        }
+
+        .pd-lightbox img {
+            display: block;
+            max-width: 92vw;
+            max-height: 80vh;
+            border-radius: 12px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        .pd-lightbox p {
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .pd-lb-btn {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 168, 232, 0.4);
+            background: rgba(15, 23, 42, 0.8);
+            color: #00a8e8;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pd-lb-btn:hover {
+            background: #00a8e8;
+            color: #FFFFFF;
+        }
+
+        .pd-lb-close {
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+
+        .pd-lb-prev {
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .pd-lb-next {
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* LOCATION */
+        .pd-location {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .pd-location-img,
+        .pd-map {
+            position: relative;
+            height: 440px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .pd-location-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .pd-location-card {
+            position: absolute;
+            left: 1.2rem;
+            right: 1.2rem;
+            bottom: 1.2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.2rem 1.4rem;
+            background: rgba(15, 23, 42, 0.88);
+            border: 1px solid rgba(0, 168, 232, 0.3);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .pd-location-card i {
+            font-size: 1.3rem;
+            color: #00a8e8;
+            margin-top: 0.2rem;
+        }
+
+        .pd-location-card h3 {
+            color: #FFFFFF;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .pd-location-card p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        .pd-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* CTA BAND */
+        .pd-cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            border-top: 1px solid rgba(0, 168, 232, 0.15);
+            text-align: center;
+        }
+
+        .pd-cta h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .pd-cta p {
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .pd-cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .pd-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.95rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .pd-btn.primary {
+            background: linear-gradient(135deg, #ee6c4d, #d85a3d);
+            color: #FFFFFF;
+            box-shadow: 0 4px 15px rgba(238, 108, 77, 0.3);
+        }
+
+        .pd-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(238, 108, 77, 0.4);
+        }
+
+        .pd-btn.ghost {
+            color: #FFFFFF;
+            border: 1px solid rgba(0, 168, 232, 0.5);
+        }
+
+        .pd-btn.ghost:hover {
+            background: rgba(0, 168, 232, 0.12);
+            color: #00a8e8;
+        }
+
+        /* MORE PROJECTS (reuses .project-card from the home page) */
+        .pd-more .projects-grid {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            position: relative;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.6rem;
+            color: #00a8e8;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .project-link::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        .project-card:hover .project-link i {
+            transform: translateX(4px);
+        }
+
+        .project-link i {
+            transition: transform 0.3s ease;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .pd-container {
+                padding: 0 2.5rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .pd-overview {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .pd-facts {
+                position: static;
+            }
+
+            .pd-scope {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pd-hero h1 {
+                font-size: 2.6rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .pd-container {
+                padding: 0 2rem;
+            }
+
+            .pd-section {
+                padding: 4rem 0;
+            }
+
+            .pd-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 200px;
+            }
+
+            .pd-location {
+                grid-template-columns: 1fr;
+            }
+
+            .pd-location-img,
+            .pd-map {
+                height: 360px;
+            }
+
+            .pd-more .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 !important;
+            }
+
+            .nav-container {
+                padding: 1rem !important;
+                width: 100% !important;
+            }
+
+            .logo-img {
+                height: 35px !important;
+                width: auto !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .pd-container {
+                padding: 0 1.5rem;
+            }
+
+            .pd-hero {
+                min-height: 88vh;
+            }
+
+            .pd-hero-content {
+                padding-bottom: 3rem;
+            }
+
+            .pd-hero h1 {
+                font-size: 1.9rem;
+                letter-spacing: -0.5px;
+            }
+
+            .pd-hero-desc {
+                font-size: 0.95rem;
+            }
+
+            .pd-meta span {
+                padding: 0.55rem 0.9rem;
+                font-size: 0.78rem;
+            }
+
+            .pd-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pd-stats .pd-stat:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+            }
+
+            .pd-stat strong {
+                font-size: 1.5rem;
+            }
+
+            .pd-scope {
+                grid-template-columns: 1fr;
+            }
+
+            .pd-gallery {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 220px;
+            }
+
+            .pd-gallery button:first-child {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .pd-gallery figcaption,
+            .pd-gallery button::after {
+                opacity: 1;
+                transform: none;
+            }
+
+            .pd-location-img,
+            .pd-map {
+                height: 300px;
+            }
+
+            .pd-cta h2 {
+                font-size: 1.7rem;
+            }
+
+            .pd-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .pd-lb-prev,
+            .pd-lb-next {
+                top: auto;
+                bottom: 1.5rem;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#">
+                <img src="power_plug_log.jpeg" alt="PowerPlug Electromechanical Works LLC" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#our-vission" class="nav-link">Our Vision</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects-compare" class="nav-link">Portfolio</a></li>
+                <!-- <li><a href="index.html#leadership" class="nav-link">Team</a></li> -->
+                <li><a href="index.html#Lifecycle" class="nav-link">Lifecycle</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/971586306786" class="nav-cta">
+                <i class="fab fa-whatsapp"></i> Get Started
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="mobile-sidebar" id="mobileSidebar">
+        <ul class="mobile-menu">
+            <li><a href="index.html#home" class="mobile-link">Home</a></li>
+            <li><a href="index.html#services" class="mobile-link">Services</a></li>
+            <li><a href="index.html#our-vission" class="mobile-link">Our Vision</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="index.html#projects-compare" class="mobile-link">Portfolio</a></li>
+            <!-- <li><a href="index.html#leadership" class="mobile-link">Team</a></li> -->
+            <li><a href="index.html#Lifecycle" class="mobile-link">Lifecycle</a></li>
+            <li><a href="index.html#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="https://wa.me/971586306786" class="mobile-cta">
+            <i class="fab fa-whatsapp"></i> Get Started
+        </a>
+    </aside>
+
+    <main id="project">
+        <!-- HERO BANNER -->
+        <section class="pd-hero" id="pdHero">
+            <div class="pd-container pd-hero-content">
+                <nav class="pd-breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="index.html#projects">Projects</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="pdCrumb"></span>
+                </nav>
+                <span class="project-category" id="pdCategory"></span>
+                <h1 id="pdTitle"></h1>
+                <p class="pd-hero-desc" id="pdSummary"></p>
+                <div class="pd-meta" id="pdMeta"></div>
+            </div>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="pd-section">
+            <div class="pd-container pd-overview">
+                <div class="pd-overview-text">
+                    <span class="section-label">Project Overview</span>
+                    <h2 class="section-title">About the <span class="accent">Project</span></h2>
+                    <div id="pdOverview"></div>
+                    <div class="pd-stats" id="pdStats"></div>
+                </div>
+                <aside class="pd-facts">
+                    <h3>Project Details</h3>
+                    <ul id="pdFacts"></ul>
+                    <a href="index.html#contact" class="cta-link">Discuss a Similar Project <i
+                            class="fas fa-arrow-right"></i></a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- SCOPE OF WORK -->
+        <section class="pd-section alt">
+            <div class="pd-container">
+                <div class="section-header-center">
+                    <span class="section-label">Scope of Work</span>
+                    <h2 class="section-title">What We <span class="accent">Delivered</span></h2>
+                    <p class="section-subtitle">Every MEP discipline designed, installed, tested and commissioned by our
+                        in-house engineering team.</p>
+                </div>
+                <div class="pd-scope" id="pdScope"></div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="pd-section">
+            <div class="pd-container">
+                <div class="section-header-center">
+                    <span class="section-label">Project Gallery</span>
+                    <h2 class="section-title">Inside the <span class="accent">Build</span></h2>
+                    <p class="section-subtitle">A closer look at the site, the systems and the finished spaces.</p>
+                </div>
+                <div class="pd-gallery" id="pdGallery"></div>
+            </div>
+        </section>
+
+        <!-- LOCATION -->
+        <section class="pd-section alt">
+            <div class="pd-container">
+                <div class="section-header-center">
+                    <span class="section-label">Project Location</span>
+                    <h2 class="section-title">Located in <span class="accent" id="pdLocTitle"></span></h2>
+                </div>
+                <div class="pd-location">
+                    <div class="pd-location-img">
+                        <img id="pdLocImg" alt="">
+                        <div class="pd-location-card">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h3 id="pdLocName"></h3>
+                                <p id="pdLocText"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pd-map">
+                        <iframe id="pdMap" title="Project location map" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="pd-cta">
+            <div class="pd-container">
+                <h2>Planning a Project <span class="accent">Like This?</span></h2>
+                <p>From design to handover, our certified engineers deliver MEP systems built for Dubai's climate and
+                    regulations. Let's talk about yours.</p>
+                <div class="pd-cta-actions">
+                    <a href="index.html#contact" class="pd-btn primary">Start Your Project <i
+                            class="fas fa-arrow-right"></i></a>
+                    <a href="index.html#projects" class="pd-btn ghost"><i class="fas fa-arrow-left"></i> All
+                        Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MORE PROJECTS -->
+        <section class="pd-section alt pd-more">
+            <div class="pd-container">
+                <div class="section-header-center">
+                    <span class="section-label">Our Work</span>
+                    <h2 class="section-title">More <span class="accent">Projects</span></h2>
+                </div>
+                <div class="projects-grid" id="pdMore"></div>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="pd-lightbox" id="pdLightbox">
+        <img id="pdLbImg" alt="">
+        <p id="pdLbCaption"></p>
+        <button class="pd-lb-btn pd-lb-close" id="pdLbClose" aria-label="Close"><i class="fas fa-xmark"></i></button>
+        <button class="pd-lb-btn pd-lb-prev" id="pdLbPrev" aria-label="Previous image"><i
+                class="fas fa-chevron-left"></i></button>
+        <button class="pd-lb-btn pd-lb-next" id="pdLbNext" aria-label="Next image"><i
+                class="fas fa-chevron-right"></i></button>
+    </dialog>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Column 1 - Logo & About -->
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo-wrapper">
+                        <img src="power_plug_log.jpeg" alt="Power Plug Electromechanical Works LLC"
+                            class="footer-logo-img">
+                    </div>
+                    <p class="footer-text">
+                        Leading MEP contractor in Dubai, delivering excellence in mechanical, electrical, and plumbing
+                        solutions since 2025.
+                    </p>
+                    <div class="footer-certifications">
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>ISO 9001</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-bolt"></i>
+                            <span>DEWA</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-fire"></i>
+                            <span>Civil Defence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 - Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="index.html#our-vission"><i class="fas fa-chevron-right"></i> Our Vision</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="index.html#projects-compare"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 - Services -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Electrical Systems</a></li>
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> HVAC & Mechanical</a></li>
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Plumbing & Drainage</a></li>
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Fire & Life Safety</a></li>
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> MEP Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 - Contact Info -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Sheikh Zayed Road, Dubai</li>
+                        <li><i class="fas fa-phone"></i> +971 58 630 6786</li>
+                        <li><i class="fas fa-envelope"></i> info@prime5electro.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Support Available</li>
+                    </ul>
+
+                    <!-- Social Links -->
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Power Plug Electromechanical Works LLC. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <!-- WhatsApp Chat Button -->
+        <a href="https://wa.me/971586306786?text=Hi%20Power%20Plug,%20I%27m%20interested%20in%20your%20MEP%20services"
+            target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Chat with us</span>
+        </a>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script>
+        // ponytail: placeholder project content - replace text/photos with the real project data
+        const img = (id, w = 1600) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
+
+        const PROJECTS = {
+            'palm-villa': {
+                title: 'Luxury Villa - Palm Jumeirah',
+                category: 'Residential',
+                summary: 'Complete MEP installation with smart home automation for a signature beachfront villa.',
+                hero: '1613490493576-7fde63acd811',
+                location: 'Palm Jumeirah',
+                address: 'Frond villa, Palm Jumeirah, Dubai, UAE',
+                locationText: 'A beachfront frond villa on Dubai\'s iconic man-made island, with direct sea views and private beach access.',
+                locationImg: '1518684079-3c830dcef090',
+                year: '2024',
+                duration: '14 Months',
+                client: 'Private Residential Client',
+                overview: [
+                    'Power Plug Electromechanical Works LLC delivered the complete MEP package for this multi-level luxury villa, from design coordination through to final DEWA and Civil Defence approvals.',
+                    'The brief called for whisper-quiet climate control, fully automated lighting and security, and resilient power for a home that runs year-round in the UAE heat. Our team coordinated closely with the architect and interior designer so that every system is concealed, serviceable and built to last.'
+                ],
+                stats: [['12,500', 'Sq Ft Built-up'], ['14', 'Months Delivery'], ['100%', 'DEWA Compliant']],
+                scope: [
+                    ['fa-bolt', 'Electrical Distribution', 'Main LV panel, sub-distribution boards and complete wiring across all floors, DEWA-approved.'],
+                    ['fa-wind', 'VRF HVAC System', 'Energy-efficient VRF system with concealed ducted units and individual room control.'],
+                    ['fa-house-signal', 'Smart Home Automation', 'Integrated lighting, curtains, climate and security controlled from a single app.'],
+                    ['fa-fire-extinguisher', 'Fire Safety', 'Addressable fire alarm, detection and suppression to Civil Defence standards.'],
+                    ['fa-faucet-drip', 'Plumbing & Pool Systems', 'Hot and cold water, drainage and complete pool plant room installation.'],
+                    ['fa-lightbulb', 'Lighting Control', 'Architectural and landscape lighting with scene-based dimming control.']
+                ],
+                gallery: [
+                    ['1600596542815-ffad4c1539a9', 'Villa exterior and pool deck'],
+                    ['1600607687939-ce8a6c25118c', 'Living area with concealed HVAC'],
+                    ['1512917774080-9991f1c4c750', 'Poolside terrace'],
+                    ['1600585154340-be6161a56a0c', 'Landscape and facade lighting'],
+                    ['1621905252507-b35492cc74b4', 'Electrical panel installation'],
+                    ['1504328345606-18bbc8c9d7d1', 'On-site MEP fabrication']
+                ]
+            },
+            'business-bay-tower': {
+                title: 'Business Bay Office Tower',
+                category: 'Commercial',
+                summary: 'High-rise MEP infrastructure with full BMS integration for a Grade-A commercial tower.',
+                hero: '1486406146926-c627a92ad1ab',
+                location: 'Business Bay',
+                address: 'Business Bay, Dubai, UAE',
+                locationText: 'Set in Dubai\'s central business district along the Dubai Water Canal, minutes from Downtown and Sheikh Zayed Road.',
+                locationImg: '1526495124232-a04e1849168c',
+                year: '2023',
+                duration: '22 Months',
+                client: 'Commercial Developer',
+                overview: [
+                    'This Grade-A office tower required a complete MEP solution capable of supporting thousands of occupants, 24/7 tenant operations and strict energy targets.',
+                    'We engineered and installed the power, cooling, fire and building management systems floor by floor, keeping pace with the structural programme and handing over each zone fully tested and commissioned.'
+                ],
+                stats: [['38', 'Floors Serviced'], ['22', 'Months Delivery'], ['24/7', 'BMS Monitoring']],
+                scope: [
+                    ['fa-bolt', 'DEWA-Approved Power', 'HV/LV substations, rising busbars and tenant metering for every floor.'],
+                    ['fa-snowflake', 'Chilled Water Plant', 'Central chilled water plant with AHUs and FCUs sized for peak summer loads.'],
+                    ['fa-bell', 'Advanced Fire Alarm', 'Addressable fire alarm, voice evacuation and sprinkler systems throughout.'],
+                    ['fa-network-wired', 'BMS Integration', 'Building management system linking HVAC, lighting and energy metering.'],
+                    ['fa-faucet', 'Plumbing & Drainage', 'Booster pumps, water storage and high-rise drainage stacks.'],
+                    ['fa-plug-circle-bolt', 'Standby Power', 'Diesel generators and automatic transfer for life-safety systems.']
+                ],
+                gallery: [
+                    ['1582407947304-fd86f028f716', 'Tower facade'],
+                    ['1497366811353-6870744d04b2', 'Fitted office floor'],
+                    ['1497366216548-37526070297c', 'Corridor lighting and services'],
+                    ['1504307651254-35680f356dfd', 'MEP installation in progress'],
+                    ['1565008447742-97f6f38c985c', 'Structure under construction'],
+                    ['1541888946425-d81bb19240f5', 'Site coordination with the engineering team']
+                ]
+            },
+            'dubai-mall-extension': {
+                title: 'Dubai Mall Extension',
+                category: 'Retail',
+                summary: 'Large-scale retail MEP with energy-efficient systems for one of the world\'s busiest destinations.',
+                hero: '1519567241046-7f570eee3ce6',
+                location: 'Downtown Dubai',
+                address: 'Downtown Dubai, UAE',
+                locationText: 'At the heart of Downtown Dubai beside Burj Khalifa, serving millions of visitors every year.',
+                locationImg: '1512453979798-5ea266f8880c',
+                year: '2025',
+                duration: '18 Months',
+                client: 'Retail Developer',
+                overview: [
+                    'The extension added new retail and leisure space to a mall that never sleeps, so every MEP system had to be installed and connected without disrupting live operations.',
+                    'Our team delivered central HVAC, resilient backup power and water recycling systems, working night shifts and phased shutdowns to keep the existing mall fully operational throughout.'
+                ],
+                stats: [['450K', 'Sq Ft Retail'], ['18', 'Months Delivery'], ['0', 'Downtime Hours']],
+                scope: [
+                    ['fa-temperature-half', 'Central HVAC Control', 'Chilled water AHUs with zone-level control across retail and common areas.'],
+                    ['fa-plug-circle-bolt', 'Emergency Backup Power', 'Standby generators and UPS for critical loads and life-safety systems.'],
+                    ['fa-recycle', 'Water Recycling System', 'Greywater treatment and reuse for irrigation and cooling tower make-up.'],
+                    ['fa-shield-halved', 'Fire & Life Safety', 'Smoke management, sprinklers and fire alarm integrated with the existing mall.'],
+                    ['fa-lightbulb', 'Lighting & Power', 'LED lighting and small power for retail units, walkways and back-of-house.'],
+                    ['fa-chart-line', 'Energy Monitoring', 'Sub-metering and dashboards to track and reduce energy consumption.']
+                ],
+                gallery: [
+                    ['1567958451986-2de427a4a0be', 'Retail floor fit-out'],
+                    ['1580674684081-7617fbf3d745', 'Downtown Dubai surroundings'],
+                    ['1597659840241-37e2b9c2f55f', 'Burj Khalifa, next door to the site'],
+                    ['1581092918056-0c4c3acd3789', 'Control systems commissioning'],
+                    ['1504328345606-18bbc8c9d7d1', 'Pipework fabrication'],
+                    ['1565008447742-97f6f38c985c', 'Construction phase']
+                ]
+            }
+        };
+
+        const slug = new URLSearchParams(location.search).get('p');
+        const P = PROJECTS[slug];
+        if (!P) location.replace('index.html#projects');
+        else render(P);
+
+        function render(p) {
+            const $ = id => document.getElementById(id);
+            document.title = `${p.title} | Power Plug Electromechanical Works LLC`;
+            $('pdHero').style.backgroundImage = `url('${img(p.hero, 1920)}')`;
+            $('pdCrumb').textContent = p.title;
+            $('pdCategory').textContent = p.category;
+            $('pdTitle').textContent = p.title;
+            $('pdSummary').textContent = p.summary;
+            $('pdMeta').innerHTML = [
+                ['fa-location-dot', p.location + ', Dubai'],
+                ['fa-calendar', 'Completed ' + p.year],
+                ['fa-clock', p.duration]
+            ].map(([i, t]) => `<span><i class="fas ${i}"></i>${t}</span>`).join('');
+
+            $('pdOverview').innerHTML = p.overview.map(t => `<p>${t}</p>`).join('');
+            $('pdStats').innerHTML = p.stats.map(([n, l]) => `<div class="pd-stat"><strong>${n}</strong><span>${l}</span></div>`).join('');
+            $('pdFacts').innerHTML = [
+                ['fa-building', 'Sector', p.category],
+                ['fa-user-tie', 'Client', p.client],
+                ['fa-location-dot', 'Location', p.address],
+                ['fa-calendar-check', 'Completed', p.year],
+                ['fa-hourglass-half', 'Duration', p.duration]
+            ].map(([i, l, v]) => `<li><i class="fas ${i}"></i><div><small>${l}</small><b>${v}</b></div></li>`).join('');
+
+            $('pdScope').innerHTML = p.scope.map(([i, h, t]) =>
+                `<div class="pd-scope-card"><div class="icon"><i class="fas ${i}"></i></div><h3>${h}</h3><p>${t}</p></div>`).join('');
+
+            $('pdGallery').innerHTML = p.gallery.map(([id, cap], i) =>
+                `<button type="button" data-i="${i}" aria-label="Open image: ${cap}"><img src="${img(id, i ? 900 : 1400)}" alt="${cap}" loading="lazy"><figcaption>${cap}</figcaption></button>`).join('');
+
+            $('pdLocTitle').textContent = p.location;
+            $('pdLocImg').src = img(p.locationImg, 1200);
+            $('pdLocImg').alt = p.location;
+            $('pdLocName').textContent = p.address;
+            $('pdLocText').textContent = p.locationText;
+            $('pdMap').src = `https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s${encodeURIComponent(p.address)}!6i13`;
+
+            $('pdMore').innerHTML = Object.entries(PROJECTS).filter(([s]) => s !== slug).map(([s, o]) => `
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="${img(o.hero, 800)}" alt="${o.title}" loading="lazy">
+                        <div class="project-overlay"><span class="project-category">${o.category}</span></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>${o.title}</h3>
+                        <p>${o.summary}</p>
+                        <a href="project.html?p=${s}" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>`).join('');
+
+            // Lightbox
+            const lb = $('pdLightbox');
+            let cur = 0;
+            const show = i => {
+                cur = (i + p.gallery.length) % p.gallery.length;
+                $('pdLbImg').src = img(p.gallery[cur][0], 1800);
+                $('pdLbImg').alt = $('pdLbCaption').textContent = p.gallery[cur][1];
+            };
+            $('pdGallery').addEventListener('click', e => {
+                const b = e.target.closest('button');
+                if (b) { show(+b.dataset.i); lb.showModal(); }
+            });
+            $('pdLbClose').onclick = () => lb.close();
+            $('pdLbPrev').onclick = () => show(cur - 1);
+            $('pdLbNext').onclick = () => show(cur + 1);
+            lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+            lb.addEventListener('keydown', e => {
+                if (e.key === 'ArrowLeft') show(cur - 1);
+                if (e.key === 'ArrowRight') show(cur + 1);
+            });
+        }
+
+        // Mobile menu (same behaviour as the home page)
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileSidebar = document.getElementById('mobileSidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        function closeMenu() {
+            mobileToggle.classList.remove('active');
+            mobileSidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        mobileToggle.addEventListener('click', () => {
+            const open = mobileSidebar.classList.toggle('active');
+            mobileToggle.classList.toggle('active', open);
+            sidebarOverlay.classList.toggle('active', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        });
+        sidebarOverlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-menu a, .mobile-cta').forEach(a => a.addEventListener('click', closeMenu));
+
+        // Scroll-to-top button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => scrollTopBtn.classList.toggle('visible', scrollY > 300));
+        scrollTopBtn.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+
+</html>
