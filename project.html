@@ -1584,6 +1584,10 @@
             margin-top: 2.5rem;
         }
 
+        .pd-stats[hidden] {
+            display: none;
+        }
+
         .pd-stat {
             padding: 1.5rem 1rem;
             text-align: center;
@@ -2201,6 +2205,15 @@
                 transform: none;
             }
         }
+/* footer contact: fixed icon column, one item per row, numbers never break */
+.footer-contact li{gap:0.85rem;}
+.footer-contact li > i{width:18px;text-align:center;margin-top:0.25rem;}
+.footer-contact a{color:inherit;text-decoration:none;transition:color 0.3s ease;}
+.footer-contact a:hover{color:#00a8e8;}
+.footer-contact-stack{display:flex;flex-direction:column;gap:0.2rem;}
+.footer-contact-stack a{white-space:nowrap;}
+.footer-contact a[href^="mailto:"]{overflow-wrap:anywhere;}
+@media (min-width:769px) and (max-width:1200px){ .footer-contact li{font-size:0.85rem;} }
     </style>
 </head>
 
@@ -2430,10 +2443,25 @@
                 <div class="footer-col">
                     <h4 class="footer-title">Contact Info</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Sheikh Zayed Road, Dubai</li>
-                        <li><i class="fas fa-phone"></i> +971 58 630 6786</li>
-                        <li><i class="fas fa-envelope"></i> info@prime5electro.com</li>
-                        <li><i class="fas fa-clock"></i> 24/7 Support Available</li>
+                        <li>
+                            <i class="fas fa-location-dot"></i>
+                            <a href="https://maps.app.goo.gl/zq6UiiJvyUwzYDLh9" target="_blank" rel="noopener">107 - Addiyar Building,<br>Sheikh Zayed Rd, Al Wasl, Dubai</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span class="footer-contact-stack">
+                                <a href="tel:+971586580786">+971 58 658 0786</a>
+                                <a href="tel:+971586306786">+971 58 630 6786</a>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@powerplugmep.com">info@powerplugmep.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Emergency Support Available</span>
+                        </li>
                     </ul>
 
                     <!-- Social Links -->
@@ -2481,41 +2509,47 @@
 
     <script>
         // ponytail: placeholder project content - replace text/photos with the real project data
-        const img = (id, w = 1600) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
+        const img = (id, w = 1600) => id.includes('/') ? id : `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
 
         const PROJECTS = {
-            'palm-villa': {
-                title: 'Luxury Villa - Palm Jumeirah',
-                category: 'Residential',
-                summary: 'Complete MEP installation with smart home automation for a signature beachfront villa.',
-                hero: '1613490493576-7fde63acd811',
+            // Real project - photos from site. Year/duration/client left out until confirmed (fields are optional).
+            'five-palm-jumeirah': {
+                title: 'FIVE Hotel Palm Jumeirah - Beach Restroom',
+                category: 'Hospitality',
+                type: 'Beach restroom & changing facilities',
+                summary: 'MEP works for the beach restroom and changing facilities at FIVE Palm Jumeirah, one of Dubai\'s landmark beachfront hotels.',
+                hero: 'projects/five-palm-jumeirah/vanity-corridor.jpeg',
                 location: 'Palm Jumeirah',
-                address: 'Frond villa, Palm Jumeirah, Dubai, UAE',
-                locationText: 'A beachfront frond villa on Dubai\'s iconic man-made island, with direct sea views and private beach access.',
-                locationImg: '1518684079-3c830dcef090',
-                year: '2024',
-                duration: '14 Months',
-                client: 'Private Residential Client',
+                address: 'FIVE Palm Jumeirah, Palm Jumeirah, Dubai, UAE',
+                locationText: 'Set on the beach at FIVE Palm Jumeirah, with views across to Dubai Marina and JBR.',
+                locationImg: 'projects/five-palm-jumeirah/beach-location.jpeg',
+                year: '2026',
                 overview: [
-                    'Power Plug Electromechanical Works LLC delivered the complete MEP package for this multi-level luxury villa, from design coordination through to final DEWA and Civil Defence approvals.',
-                    'The brief called for whisper-quiet climate control, fully automated lighting and security, and resilient power for a home that runs year-round in the UAE heat. Our team coordinated closely with the architect and interior designer so that every system is concealed, serviceable and built to last.'
+                    'Power Plug Electromechanical Works LLC delivered the MEP works for the guest restroom and changing facilities serving the beach at FIVE Palm Jumeirah.',
+                    'The spaces combine warm timber, onyx and marble finishes with feature lighting, so every service had to be neatly concealed. From washrooms and urinal bays to accessible WCs, lockers and outdoor beach showers, the facility is built for heavy daily use in a premium hospitality setting.'
                 ],
-                stats: [['12,500', 'Sq Ft Built-up'], ['14', 'Months Delivery'], ['100%', 'DEWA Compliant']],
                 scope: [
-                    ['fa-bolt', 'Electrical Distribution', 'Main LV panel, sub-distribution boards and complete wiring across all floors, DEWA-approved.'],
-                    ['fa-wind', 'VRF HVAC System', 'Energy-efficient VRF system with concealed ducted units and individual room control.'],
-                    ['fa-house-signal', 'Smart Home Automation', 'Integrated lighting, curtains, climate and security controlled from a single app.'],
-                    ['fa-fire-extinguisher', 'Fire Safety', 'Addressable fire alarm, detection and suppression to Civil Defence standards.'],
-                    ['fa-faucet-drip', 'Plumbing & Pool Systems', 'Hot and cold water, drainage and complete pool plant room installation.'],
-                    ['fa-lightbulb', 'Lighting Control', 'Architectural and landscape lighting with scene-based dimming control.']
+                    ['fa-faucet-drip', 'Plumbing & Water Supply', 'Water supply to basins, WCs, urinals and showers across the facility.'],
+                    ['fa-water', 'Drainage', 'Soil, waste and floor drainage for washrooms and outdoor shower areas.'],
+                    ['fa-lightbulb', 'Lighting & Power', 'Feature, vanity and ceiling lighting with small power throughout.'],
+                    ['fa-wind', 'Ventilation', 'Extract ventilation to keep washrooms and changing areas fresh.'],
+                    ['fa-wheelchair', 'Accessible Facilities', 'Services for the accessible WC, including fixtures and grab-rail areas.'],
+                    ['fa-shower', 'Beach Showers', 'Outdoor showers set into the marble-clad beachfront wall.']
                 ],
                 gallery: [
-                    ['1600596542815-ffad4c1539a9', 'Villa exterior and pool deck'],
-                    ['1600607687939-ce8a6c25118c', 'Living area with concealed HVAC'],
-                    ['1512917774080-9991f1c4c750', 'Poolside terrace'],
-                    ['1600585154340-be6161a56a0c', 'Landscape and facade lighting'],
-                    ['1621905252507-b35492cc74b4', 'Electrical panel installation'],
-                    ['1504328345606-18bbc8c9d7d1', 'On-site MEP fabrication']
+                    ['projects/five-palm-jumeirah/vanity-corridor.jpeg', 'Vanity counter with onyx top and feature lighting'],
+                    ['projects/five-palm-jumeirah/vanity-mirrors.jpeg', 'Washroom vanity and mirrors'],
+                    ['projects/five-palm-jumeirah/urinal-bay.jpeg', 'Urinal bay'],
+                    ['projects/five-palm-jumeirah/mens-washroom.jpeg', 'Men\'s washroom'],
+                    ['projects/five-palm-jumeirah/accessible-wc.jpeg', 'Accessible WC'],
+                    ['projects/five-palm-jumeirah/wc-cubicle.jpeg', 'WC cubicle with onyx wall'],
+                    ['projects/five-palm-jumeirah/changing-lockers.jpeg', 'Changing area and lockers'],
+                    ['projects/five-palm-jumeirah/locker-vanity.jpeg', 'Locker room vanity'],
+                    ['projects/five-palm-jumeirah/cubicle-corridor.jpeg', 'Cubicle corridor'],
+                    ['projects/five-palm-jumeirah/hand-basin.jpeg', 'Hand basin with onyx cladding'],
+                    ['projects/five-palm-jumeirah/beach-showers.jpeg', 'Outdoor beach showers'],
+                    ['projects/five-palm-jumeirah/pool-deck.jpeg', 'Beachfront pool deck and surroundings'],
+                    ['projects/five-palm-jumeirah/marble-entrance.jpeg', 'Marble-clad entrance']
                 ]
             },
             'business-bay-tower': {
@@ -2603,19 +2637,22 @@
             $('pdSummary').textContent = p.summary;
             $('pdMeta').innerHTML = [
                 ['fa-location-dot', p.location + ', Dubai'],
-                ['fa-calendar', 'Completed ' + p.year],
-                ['fa-clock', p.duration]
-            ].map(([i, t]) => `<span><i class="fas ${i}"></i>${t}</span>`).join('');
+                ['fa-calendar', p.year && 'Completed ' + p.year],
+                ['fa-clock', p.duration],
+                ['fa-building', !p.year && p.category]
+            ].filter(([, t]) => t).map(([i, t]) => `<span><i class="fas ${i}"></i>${t}</span>`).join('');
 
             $('pdOverview').innerHTML = p.overview.map(t => `<p>${t}</p>`).join('');
-            $('pdStats').innerHTML = p.stats.map(([n, l]) => `<div class="pd-stat"><strong>${n}</strong><span>${l}</span></div>`).join('');
+            $('pdStats').hidden = !p.stats;
+            $('pdStats').innerHTML = (p.stats || []).map(([n, l]) => `<div class="pd-stat"><strong>${n}</strong><span>${l}</span></div>`).join('');
             $('pdFacts').innerHTML = [
                 ['fa-building', 'Sector', p.category],
+                ['fa-layer-group', 'Project type', p.type],
                 ['fa-user-tie', 'Client', p.client],
                 ['fa-location-dot', 'Location', p.address],
                 ['fa-calendar-check', 'Completed', p.year],
                 ['fa-hourglass-half', 'Duration', p.duration]
-            ].map(([i, l, v]) => `<li><i class="fas ${i}"></i><div><small>${l}</small><b>${v}</b></div></li>`).join('');
+            ].filter(([, , v]) => v).map(([i, l, v]) => `<li><i class="fas ${i}"></i><div><small>${l}</small><b>${v}</b></div></li>`).join('');
 
             $('pdScope').innerHTML = p.scope.map(([i, h, t]) =>
                 `<div class="pd-scope-card"><div class="icon"><i class="fas ${i}"></i></div><h3>${h}</h3><p>${t}</p></div>`).join('');
